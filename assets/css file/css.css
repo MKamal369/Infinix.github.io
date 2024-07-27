@@ -1,0 +1,466 @@
+/*---------------------Font Inserting-------------------------------*/
+@import url(clash-display.css);
+
+/*--------------Variables Section-----------*/
+
+:root{
+    --c-dark: #212529;
+    --c-brand: rgb(78, 87, 212);
+    --c-brand-light: #6970dd;
+    --c-brand-rgb: 78, 87, 212;
+    --c-body: #727272;
+    --font-base: "ClashDisplay", sans-serif;
+    --box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    --transition: all 0.5s ease;
+}
+/*--------------end of Variables Section-----------*/
+
+/*--------------Hero section-----------*/
+
+#hero{
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(var(--c-brand-rgb), 0.5), rgba(var(--c-brand-rgb), 0.4)), url(../images/hero-1.jpg);
+
+
+}
+
+/*--------------end Hero section-----------*/
+
+/*------------Reset and Helpers------------------*/
+body{
+    font-family: var(--font-base);
+    line-height: 1.7;
+    color: var(--c-body)
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4,.h5, .h6{
+    font-weight: 600;
+}
+
+a{
+    text-decoration: none;
+    color: var(--c-brand);
+    transition: var(--transition);
+}
+
+a:hover{
+    color: var(--c-brand-light);
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.section.padding{
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+
+/*------------end of Reset and Helpers------------------*/
+
+
+
+/*---------------------Nav Section-------------------------*/
+.navbar{
+    box-shadow: var(--box-shadow);
+}
+.navbar-nav .nav-link{
+    font-weight: 500;
+    /*color: var(--c-brand);*/
+}.nav-link{
+    position: relative;
+ }
+
+.navbar-nav .nav-link.active{
+    color: var(--c-brand);
+}
+/*---------------------Nav Section-------------------------*/
+
+/*---------------------Btn Section-------------------------*/
+.btn{
+   font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding: 10px 24px;
+}
+
+.btn-brand{
+    border-color: var(--c-brand);
+    background-color: var(--c-brand);
+    color: white;
+}
+
+.btn-brand:hover{
+    background-color: var(--c-brand-light);
+    border-color: var(--c-brand-light);
+    color: white;
+}
+
+#get{
+    background: var(--c-brand);
+    color: white;
+    border: none;
+}
+
+#our{
+    background: white;
+    color: black;
+    border: none;
+}
+
+#our:hover{
+    background: rgb(209, 210, 211);
+
+}
+
+#get:hover{
+    background: var(--c-brand-light);
+}
+
+/*----------------------About Section----------------------*/
+
+
+
+#section_1{
+    position: relative;
+}
+
+#section_1:before {
+    content: "";
+    background: #4d56d2;
+    height: 4px;
+    width: 70px;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translate(-50%);
+    transition: var(--transition)
+}
+
+.section-title #p{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#p{
+    max-width: 500px;
+}
+
+.iconbox{
+    height: 70px;
+    width: 70px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--c-brand);
+    background-image: linear-gradient(rgba(var(--c-brand-rgb), 0.5), rgba(var(--c-brand-rgb), 0.4));
+    font-size:34px;
+    flex: none;
+}
+/*----------------------end ofAbout Section----------------------*/
+
+
+/*----------Service Section-------------*/
+
+.Awesome{
+    position: relative;
+}
+.title{
+    position: relative;
+}
+
+/*.title::before{*/
+/*    content:"";*/
+/*    position: absolute;*/
+/*    bottom: -40px;*/
+/*    left: 50%;*/
+/*    height: 4px;*/
+/*    width: 70px;*/
+/*    transform: translate(-50%);*/
+/*    background-color: var(--c-brand);*/
+/*}*/
+
+#we-love{
+    max-width:600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.theme-shadow{
+    box-shadow: var(--box-shadow);
+
+}
+
+.service{
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.title::before{
+    content: " ";
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    height: 4px;
+    width: 70px;
+    transform: translate(-50%);
+    background-color: var(--c-brand);
+}
+
+.service::after{
+    content: "";
+    position: absolute;
+    left: 100%;
+    bottom: 0;
+    height: 40px;
+    width: 80px;
+    transform: translate(-50%);
+    transition: var(--transition);
+    background-color:rgba(var(--c-brand-rgb), 0.2);
+}
+
+.service:hover::after{
+    content: "";
+    position: absolute;
+    left: 100%;
+    bottom: 0;
+    height: 100%;
+    width: 200%;
+    transform: translate(-50%);
+    background-color:var(--c-brand);
+    z-index: -1;
+}
+
+.service:hover p, .service:hover h5{
+
+    color: white;
+}
+
+.service:hover .iconbox{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.section-title p{
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*------------end of Service Section-------------*/
+
+
+/*------------counter Section-------------*/
+
+#counter{
+    background: linear-gradient(rgba(var(--c-brand-rgb), 85%), rgba(var(--c-brand-rgb), 85%)), url("../images/counter.jpg") center center;
+    background-size: cover;
+    margin: 200px 0 200px 0;
+    padding: 100px;
+}
+
+/*------------counter Section-------------*/
+
+
+/*------------Portfolio Section-------------*/
+
+.portfolio h1{
+    position: relative;
+}
+
+.portfolio h1::before{
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    height: 4px;
+    width: 70px;
+    transform: translate(-50%);
+    background-color: var(--c-brand);
+}
+
+.portfolio p{
+    max-width: 600px;
+}
+
+#portfolio img{
+    /*background-size: cover*/
+    background-position: center;
+
+}
+
+.image-zoom{
+    overflow: hidden;
+    position: relative;
+}
+
+.image-zoom-warpper{
+    overflow: hidden;
+    position: relative;
+}
+
+.image-zoom-warpper img{
+    transition: var(--transition);
+}
+
+.image-zoom:hover .image-zoom-warpper img{
+    transform: scale(1.1);
+}
+
+
+.portfolio-item .iconbox{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+
+.portfolio-item:hover .iconbox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 100%;
+    transition: var(--transition);
+    background: var(--c-brand);
+    color: white;
+}
+
+/*------------Portfolio Section-------------*/
+.profile{
+    position: relative;
+    z-index: 2;
+}
+
+.testimonials-p{
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#message:before{
+    z-index: 1;
+    content: "";
+    height: 60px;
+    width: 60px;
+    bottom: -20px;
+    background: white;
+    position: absolute;
+    transform: rotate(50deg);
+}
+
+.avatar{
+    border-radius: 70%;
+}
+
+.review-head{
+    position: relative;
+}
+
+.message{
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    position: absolute;
+    bottom: -10px;
+    left: 10%;
+    transform: rotate(50deg);
+}
+
+#test{
+    position: relative;
+}
+
+
+#test::before{
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translate(-50%);
+    background: var(--c-brand);
+    height: 4px;
+    width: 70px;
+}
+
+
+/*------------------------team section-------------------------*/
+
+.row{
+    position: relative;
+}
+
+.details{
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    background: var(--c-brand);
+    height: 100px;
+    width: 90%;
+    transform: translate(-50%);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.image-zoom:hover .details{
+
+    bottom: 50px;
+    background: var(--c-brand);
+    opacity: 100;
+}
+
+.team-header h1{
+    position: relative;
+}
+
+.team-header h1::before{
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    height: 4px;
+    width: 70px;
+    transform: translate(-50%);
+    background-color: var(--c-brand);
+}
+
+/*------------------------end of team section-------------------------*/
+
+.bg{
+    background: linear-gradient(rgba(var(--c-brand-rgb), 85%), rgba(var(--c-brand-rgb), 85%)), url("../images/counter.jpg")center center;
+    background-size: cover;
+    padding: 200px 0 500px 0;
+}
+.end_icons i{
+    color: white;
+    font-size: 1.4em;
+    padding: 10px;
+    border-radius: 90%;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.end_icons i:hover{
+    background-color: var(--c-brand);
+}
+#insta_contact{
+    text-decoration: none;
+
+}
+
+#insta_contact:hover{
+    color: var(--c-brand);
+}
+
+.about p:hover {
+    color: var(--c-brand);
+}
